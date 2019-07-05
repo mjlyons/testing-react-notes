@@ -19,7 +19,8 @@ jest —watch
 ### Mocking
 
 [ ] https://blog.kentcdodds.com/but-really-what-is-a-javascript-mock-10d060966f7d
-`jest.mock(importpath, mockedThing)`
+- `jest.mock(importpath, mockedThing)`
+- simulate time passing: jest.userFakeTimers(), jest.runAllTimers()
 
 ### Expect commands:
 
@@ -59,6 +60,10 @@ jest —watch
 - `getByText()` finds element by text content
 - `getByLabelText()` finds element by corresponding label text content
 - `getByTestId()`: finds element matching attr `data-testid`
+- render vs renderIntoDocument: whether want to trigger document-generated events
+  - submitButton.click -> triggers submit event
+  - node.click() triggers click (not DOM-initiated)
+- afterEach(cleanup): removes component from DOM (including container), unmount removes component from DOM but not container
 
 ## Cypress
 
